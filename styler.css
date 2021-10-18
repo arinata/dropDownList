@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    font-size: 14px;
+    font-family: Montserrat;
+    line-height: 1.6em;
+    -webkit-text-size-adjust: 100%;
+    background: #fff;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 0;
+    background: #000;
+}
+
+ul#main_nav {
+    display: inline;
+}
+
+ul#main_nav li.dropdown:hover a{
+    color: #525458;
+}
+
+ul#main_nav li.dropdown ul.subMenu li:hover a{
+    color:turquoise;
+}
+
+ul#main_nav li.dropdown ul.subMenu li.nest ul.nested li:hover a{
+    color:turquoise;
+}
+
+ul#main_nav li.dropdown ul.subMenu li.nest ul.nested li a{
+    color: #000;
+    transition: color 300ms ease-in-out;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+}
+
+ul#main_nav li.dropdown ul.subMenu li a{
+    color: #000;
+    transition: color 300ms ease-in-out;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+}
+
+ul#main_nav li.dropdown ul{
+    text-align: left;
+}
+
+ul#main_nav li a {
+    color: #fff;
+    transition: color 300ms ease-in-out;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+}
+
+ul#main_nav li.dropdown > a::after {
+    content: "\f107";
+    margin-left: 10px;
+    color: #fff;
+}
+
+ul#main_nav li ul.subMenu{
+    display: none;
+    position: absolute;
+    z-index: 5;
+    background:#fff;
+    min-width: 175px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ul#main_nav li ul.subMenu li{
+    display: block;
+}
+
+ul.nested{
+    display: none;
+    position: absolute;
+    z-index: 5;
+    background:#fff;
+    min-width: 175px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ul#main_nav li ul.subMenu li.nest> a::after {
+    content: "\f105";
+    margin-left: 10px;
+    color: #000;
+}
+
+ul#main_nav li ul.subMenu li:hover ul.nested{
+    display: inline-block;
+}
+
+#main_nav li {
+    display: inline-block;
+    line-height: 45px;
+    margin-left: 20px;
+}
+
+ul#main_nav li:hover {
+    cursor: pointer;
+}
+
+ul#main_nav li:hover ul.subMenu {
+    display:grid;
+    cursor: pointer;
+    
+}
